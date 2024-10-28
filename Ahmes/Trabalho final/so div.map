@@ -1,0 +1,23 @@
+Símbolo         Valor Decimal   Valor Hexadecimal
+-------         -------------   -----------------
+VERIFICA                   20                  14
+AUMENTA                    53                  35
+MENOR                      61                  3D
+FIM                        68                  44
+X                         128                  80
+Y                         129                  81
+Z                         130                  82
+N                         131                  83
+A1                        132                  84
+A0                        133                  85
+B1                        134                  86
+B0                        135                  87
+C                         136                  88
+D                         137                  89
+COUNT                     138                  8A
+W                         139                  8B
+DIV1                      140                  8C
+DIV0                      141                  8D
+C8                        142                  8E
+C0                        143                  8F
+C1                        144                  90

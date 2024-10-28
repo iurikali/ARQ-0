@@ -1,0 +1,58 @@
+;Iniciando as vars
+
+	LDA c0
+	STA q
+	STA r
+	STA count
+	LDA a1
+	STA x1
+	LDA a0
+	STA x0
+
+Menos:
+	LDA x0
+	SUB b
+	JB Borrow
+	STA x0
+Aumenta:
+	LDA q
+	ADD c1
+	STA q
+	JMP Menos
+Borrow:
+	LDA x1
+	SUB c1
+	JB Fim
+	STA x1
+	LDA x0
+	SUB b
+	STA x0
+	JMP Aumenta
+
+Fim:
+	LDA x0
+	STA r
+	HLT
+			
+
+
+
+
+
+
+
+
+
+
+ORG 	h80
+
+a1:	DB
+a0:	DB
+b:	DB
+q:	0
+r:	0
+x1:	0
+x0:	0
+count:	0
+c0:	0
+c1:	1

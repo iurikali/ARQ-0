@@ -1,0 +1,21 @@
+87 = Auxiliar = 0
+88 = Auxiliar = B
+89 = -1
+8A = 0
+8B = 1
+8C = 4
+8D = -C
+
+8E = 80
+8F = Mask b7
+90 = 04
+91 = Mask a2
+92 = 20
+93 = Mask !a5
+94 = 08
+95 = Mask !c3
+96 = 12
+
+
+Multiplicação acaba na 1B
+Div acaba na 49

@@ -1,0 +1,138 @@
+;Multiplicao
+;Iniciando as vars
+	LDA c0
+	STA a1
+	STA a0
+	STA count
+	LDA y
+	STA w
+
+Verfica:
+	LDA count
+	SUB c8
+	JZ Potencia
+		
+DeslicaY:
+	LDA w
+	SHR
+	STA w
+	LDA a1
+	JNC RotR1
+	ADD x
+RotR1:	
+	ROR
+	STA a1
+	LDA a0
+	ROR
+	STA a0
+;Aumentando o count
+	LDA count
+	ADD c1
+	STA count
+	JMP Verfica
+
+;Potencia
+;Iniciando novamente as vars
+Potencia:
+	LDA c0
+	STA count
+	LDA a1
+	STA b1
+	LDA a0
+	STA b0
+
+VerificaN:
+	LDA count
+	SUB n
+	JZ Div
+	
+	LDA b0
+	SHL
+	STA b0
+	LDA b1
+	ROL
+	STA b1
+	
+	LDA count
+	ADD c1
+	STA count
+	JMP VerificaN
+
+ORG 150
+Div:
+	LDA z
+	JZ Zero
+	LDA c0
+	STA C
+	STA D
+	STA count
+	LDA b0
+	STA div0
+
+;Verificando se deu overflow
+	LDA b1
+	STA div1
+	SUB z
+	JP Fim
+
+VerificaDiv:
+	LDA count
+	SUB c8
+	JZ Fim
+
+	LDA div0
+	SHL
+	STA div0
+	LDA div1
+	ROL
+	STA div1
+	STA D
+	SUB z
+	JB Menor
+	STA div1
+	STA D
+	LDA C
+	SHL
+	ADD c1
+	STA C
+
+;Aumentando o count
+Aumenta:
+	LDA count
+	ADD c1
+	STA count
+	JMP VerificaDiv
+Menor:
+	LDA C
+	SHL
+	STA C
+	JMP Aumenta
+Fim:
+	HLT	
+
+Zero:
+	LDA c1
+	STA C
+	LDA c0
+	STA D
+	JMP Fim
+
+
+ORG h80
+x:	DB
+y:	DB
+z:	DB
+n:	DB
+a1:	DB
+a0:	DB
+b1:	DB
+b0:	DB
+C:	DB
+D:	DB
+count:	h0
+w: 	DB
+div1:	0
+div0:	0
+c8: 	h08
+c0: 	h0
+c1: 	h1

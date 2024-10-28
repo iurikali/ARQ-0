@@ -1,0 +1,42 @@
+ORG 	h80
+xA: 	DB
+xB:	DB
+yA: 	DB
+yB: 	DB
+fA:	DB
+fB:	DB
+gA:	DB
+gB:	DB
+c1:	h01
+
+
+ORG h0
+
+Inicio:
+	LDA	xB		
+	ADD	yB
+	STA	fB
+	JC	Carry
+	LDA	xA
+Soma:	
+	ADD	yA
+	STA	fA
+	JMP	Subi
+Carry:
+	LDA	c1
+	ADD	xA
+	JMP	Soma
+Subi:	
+	LDA	xB
+	SUB	yB
+	STA	gB
+	LDA	xA
+	JB	Borry
+SubOP:
+	SUB	yA
+	STA	gA
+	HLT
+Borry:
+	SUB	c1
+	JMP	SubOP
+

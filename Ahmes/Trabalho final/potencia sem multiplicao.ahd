@@ -1,0 +1,81 @@
+;Multiplicao
+;Iniciando as vars
+	LDA c0
+	STA a1
+	STA a0
+	STA count
+	LDA y
+	STA w
+
+Verfica:
+	LDA count
+	SUB c8
+	JZ Potencia
+		
+DeslicaY:
+	LDA w
+	SHR
+	STA w
+	LDA a1
+	JNC RotR1
+	ADD x
+RotR1:	
+	ROR
+	STA a1
+	LDA a0
+	ROR
+	STA a0
+;Aumentando o count
+	LDA count
+	ADD c1
+	STA count
+	JMP Verfica
+
+;Potencia
+;Iniciando novamente as vars
+Potencia:
+	LDA c0
+	STA count
+	LDA a1
+	STA b1
+	LDA a0
+	STA b0
+
+VerificaN:
+	LDA count
+	SUB n
+	JZ Fim
+	
+	LDA b0
+	SHL
+	STA b0
+	LDA b1
+	ROL
+	STA b1
+	
+	LDA count
+	ADD c1
+	STA count
+	JMP VerificaN
+
+Fim:
+	HLT	
+	
+
+
+ORG h80
+x:	DB
+y:	DB
+z:	DB
+n:	DB
+a1:	DB
+a0:	DB
+b1:	DB
+b0:	DB
+C:	DB
+D:	DB
+count:	h0
+w: 	DB
+c8: 	h08
+c0: 	h0
+c1: 	h1

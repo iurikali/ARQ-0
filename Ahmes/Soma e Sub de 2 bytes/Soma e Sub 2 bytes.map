@@ -1,0 +1,17 @@
+Símbolo         Valor Decimal   Valor Hexadecimal
+-------         -------------   -----------------
+XA                        128                  80
+XB                        129                  81
+YA                        130                  82
+YB                        131                  83
+FA                        132                  84
+FB                        133                  85
+GA                        134                  86
+GB                        135                  87
+C1                        136                  88
+INICIO                      0                   0
+SOMA                       10                   A
+CARRY                      16                  10
+SUBI                       22                  16
+SUBOP                      32                  20
+BORRY                      37                  25

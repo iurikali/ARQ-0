@@ -1,0 +1,53 @@
+;Iniciando as vars
+	LDA c0
+	STA a1
+	STA a0
+	STA count
+	LDA y
+	STA w
+
+Verfica:
+	LDA count
+	SUB c8
+	JZ Fim
+		
+DeslicaY:
+	LDA w
+	SHR
+	STA w
+	LDA a1
+	JNC RotR1
+	ADD x
+RotR1:	
+	ROR
+	STA a1
+	LDA a0
+	ROR
+	STA a0
+;Aumentando o count
+	LDA count
+	ADD c1
+	STA count
+	JMP Verfica
+
+Fim:
+	HLT
+
+
+
+ORG h80
+x:	DB
+y:	DB
+z:	DB
+n:	DB
+a1:	DB
+a0:	DB
+b1:	DB
+b2:	DB
+C:	DB
+D:	DB
+count:	h0
+w: 	DB
+c8: 	h08
+c0: 	h0
+c1: 	h1

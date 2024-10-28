@@ -1,0 +1,78 @@
+
+;Iniciando as variaveis
+
+Inicio: 
+	LDA c0
+	STA r1
+	STA r0
+	STA y0
+	STA y1
+	LDA a1
+	STA x1
+	LDA a0
+	STA x0
+
+;Verificando se são iguais
+Verificao:
+	LDA y0
+	SUB b0
+	JNZ Soma
+	LDA y1
+	SUB b1
+	JNZ Soma
+	JMP Fim
+
+;Iniciando a soma
+Soma:
+	LDA r0
+	ADD a0
+	STA r0
+	LDA r1
+	JNC SomaH
+	ADD c1
+SomaH:
+	ADD a1
+	STA r1
+;Aumetando o contador
+Contador:
+	LDA y0
+	ADD c1
+	STA y0
+	LDA r1
+	JNC Jump
+	ADD c1
+	STA r1
+Jump:
+	JMP Verificao
+Fim:
+	HLT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ORG h80
+a1:	DB ;Parte Alta do a
+a0:	DB ;Parte baixa do a
+b1:	DB
+b0:	DB
+r1:	DB
+r0:	DB
+;Copias das variaveis 
+x1:	DB 
+x0:	DB
+y1:	DB
+y0:	DB
+
+;Constantes
+c0:	h0
+c1:	h1

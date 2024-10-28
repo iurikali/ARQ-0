@@ -1,0 +1,206 @@
+00  20 8A   LDA 8A
+02  10 87   STA 87
+04  20 81   LDA 81
+06  10 88   STA 88
+08  20 87   LDA 87
+0A  30 80   ADD 80
+0C  10 87   STA 87
+0E  20 88   LDA 88
+10  30 89   ADD 89
+12  10 88   STA 88
+14  A0 18   JZ  18
+16  80 08   JMP 08
+18  20 87   LDA 87
+1A  10 83   STA 83
+1C  00      NOP
+1D  20 82   LDA 82
+1F  A0 46   JZ  46
+21  60      NOT
+22  30 8B   ADD 8B
+24  10 8D   STA 8D
+26  20 8A   LDA 8A
+28  10 87   STA 87
+2A  20 81   LDA 81
+2C  10 88   STA 88
+2E  A0 40   JZ  40
+30  30 8D   ADD 8D
+32  10 88   STA 88
+34  90 40   JN  40
+36  20 87   LDA 87
+38  30 8B   ADD 8B
+3A  10 87   STA 87
+3C  20 88   LDA 88
+3E  80 2E   JMP 2E
+40  20 87   LDA 87
+42  10 84   STA 84
+44  80 4A   JMP 4A
+46  20 8B   LDA 8B
+48  10 84   STA 84
+4A  00      NOP
+4B  20 8A   LDA 8A
+4D  10 87   STA 87
+4F  20 8C   LDA 8C
+51  10 88   STA 88
+53  20 87   LDA 87
+55  30 84   ADD 84
+57  10 87   STA 87
+59  20 88   LDA 88
+5B  30 89   ADD 89
+5D  10 88   STA 88
+5F  A0 63   JZ  63
+61  80 53   JMP 53
+63  20 87   LDA 87
+65  60      NOT
+66  30 8B   ADD 8B
+68  10 85   STA 85
+6A  80 99   JMP 99
+6C  00      NOP
+6D  00      NOP
+6E  00      NOP
+6F  00      NOP
+70  00      NOP
+71  00      NOP
+72  00      NOP
+73  00      NOP
+74  00      NOP
+75  00      NOP
+76  00      NOP
+77  00      NOP
+78  00      NOP
+79  00      NOP
+7A  00      NOP
+7B  00      NOP
+7C  00      NOP
+7D  00      NOP
+7E  00      NOP
+7F  00      NOP
+80  00      NOP
+81  00      NOP
+82  00      NOP
+83  00      NOP
+84  00      NOP
+85  00      NOP
+86  00      NOP
+87  04      NOP
+88  00      NOP
+89  FF      HLT
+8A  00      NOP
+8B  01      NOP
+8C  04      NOP
+8D  FE      HLT
+8E  80 00   JMP 00
+90  04      NOP
+91  04      NOP
+92  20 20   LDA 20
+94  08      NOP
+95  08      NOP
+96  12 00   STA 00
+98  00      NOP
+99  20 81   LDA 81
+9B  50 8E   AND 8E
+9D  10 8F   STA 8F
+9F  20 80   LDA 80
+A1  50 90   AND 90
+A3  10 91   STA 91
+A5  20 80   LDA 80
+A7  60      NOT
+A8  50 92   AND 92
+AA  10 93   STA 93
+AC  20 82   LDA 82
+AE  60      NOT
+AF  50 94   AND 94
+B1  10 95   STA 95
+B3  20 8A   LDA 8A
+B5  30 8F   ADD 8F
+B7  30 91   ADD 91
+B9  30 93   ADD 93
+BB  30 95   ADD 95
+BD  40 96   OR  96
+BF  10 86   STA 86
+C1  F0      HLT
+C2  00      NOP
+C3  00      NOP
+C4  00      NOP
+C5  00      NOP
+C6  00      NOP
+C7  00      NOP
+C8  00      NOP
+C9  00      NOP
+CA  00      NOP
+CB  00      NOP
+CC  00      NOP
+CD  00      NOP
+CE  00      NOP
+CF  00      NOP
+D0  00      NOP
+D1  00      NOP
+D2  00      NOP
+D3  00      NOP
+D4  00      NOP
+D5  00      NOP
+D6  00      NOP
+D7  00      NOP
+D8  00      NOP
+D9  00      NOP
+DA  00      NOP
+DB  00      NOP
+DC  00      NOP
+DD  00      NOP
+DE  00      NOP
+DF  00      NOP
+E0  00      NOP
+E1  00      NOP
+E2  00      NOP
+E3  00      NOP
+E4  00      NOP
+E5  00      NOP
+E6  00      NOP
+E7  00      NOP
+E8  00      NOP
+E9  00      NOP
+EA  00      NOP
+EB  00      NOP
+EC  00      NOP
+ED  00      NOP
+EE  00      NOP
+EF  00      NOP
+F0  00      NOP
+F1  00      NOP
+F2  00      NOP
+F3  00      NOP
+F4  00      NOP
+F5  00      NOP
+F6  00      NOP
+F7  00      NOP
+F8  00      NOP
+F9  00      NOP
+FA  00      NOP
+FB  00      NOP
+FC  00      NOP
+FD  00      NOP
+FE  00      NOP
+FF  00      NOP
+
+80  00     
+81  00     
+82  00     
+83  00     
+84  00     
+85  00     
+86  00     
+87  04     
+88  00     
+89  FF     
+8A  00     
+8B  01     
+8C  04     
+8D  FE     
+8E  80     
+8F  00     
+90  04     
+91  04     
+92  20     
+93  20     
+94  08     
+95  08     
+96  12     

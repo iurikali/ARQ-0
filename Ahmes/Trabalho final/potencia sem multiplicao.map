@@ -1,0 +1,23 @@
+Símbolo         Valor Decimal   Valor Hexadecimal
+-------         -------------   -----------------
+VERFICA                    12                   C
+DESLICAY                   18                  12
+ROTR1                      29                  1D
+POTENCIA                   45                  2D
+VERIFICAN                  57                  39
+FIM                        81                  51
+X                         128                  80
+Y                         129                  81
+Z                         130                  82
+N                         131                  83
+A1                        132                  84
+A0                        133                  85
+B1                        134                  86
+B0                        135                  87
+C                         136                  88
+D                         137                  89
+COUNT                     138                  8A
+W                         139                  8B
+C8                        140                  8C
+C0                        141                  8D
+C1                        142                  8E

@@ -1,0 +1,21 @@
+Símbolo         Valor Decimal   Valor Hexadecimal
+-------         -------------   -----------------
+INICIO                      0                   0
+VERIFICAO                  18                  12
+SOMA                       32                  20
+SOMAH                      44                  2C
+CONTADOR                   48                  30
+JUMP                       62                  3E
+FIM                        64                  40
+A1                        128                  80
+A0                        129                  81
+B1                        130                  82
+B0                        131                  83
+R1                        132                  84
+R0                        133                  85
+X1                        134                  86
+X0                        135                  87
+Y1                        136                  88
+Y0                        137                  89
+C0                        138                  8A
+C1                        139                  8B
